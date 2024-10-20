@@ -53,7 +53,7 @@ namespace Duel
         {
                 if (Input.GetKeyUp(KeyCode.A)) Attack();
                 if (Input.GetKeyUp(KeyCode.D)) Taunt();
-                if (Input.GetKeyUp(KeyCode.W)) Move();
+               // if (Input.GetKeyUp(KeyCode.W)) Move();
                 if (Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.Space)) Shield();
         }
     }

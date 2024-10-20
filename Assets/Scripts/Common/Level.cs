@@ -5,10 +5,15 @@ namespace Duel
     public class Level : MonoBehaviour
     {
         [SerializeField] GameObject road;
+        [Header("player")]
         [SerializeField] GameObject _playerPrefab;
-        [SerializeField] GameObject _enemyPrefab;
+        [SerializeField] Transform playerSpawnPoint;
 
-        
+        [Header("Enemy")]
+        [SerializeField] GameObject _enemyPrefab;
+        [SerializeField] Transform enemySpawnPoint;
+
+
         public void StartGame()
         {
             road.SetActive(true);
@@ -18,29 +23,29 @@ namespace Duel
 
         public void SpawnPlayers()
         {
-            GameObject go = Instantiate(_playerPrefab, new Vector3(-0.214f, 0, -26), _playerPrefab.transform.rotation);
-            go.layer = 6;
-            go.name = "Player";
-            go.tag = "Player";
-            GameManager.Instance.player = go;
+            GameObject player = Instantiate(_playerPrefab, playerSpawnPoint.position, _playerPrefab.transform.rotation);
+            player.layer = 6;
+            player.name = "Player";
+            player.tag = "Player";
+            GameManager.Instance.player = player;
 
-            GameObject goE = Instantiate(_enemyPrefab, new Vector3(0, 0, 26), Quaternion.Euler(new Vector3(0, 180, 0)));
-            goE.layer = 7;
-            goE.name = "Enemy";
-            goE.tag = "Enemy";
-            GameManager.Instance.enemy = goE;
+            GameObject enemy = Instantiate(_enemyPrefab, enemySpawnPoint.position, Quaternion.Euler(new Vector3(0, 180, 0)));
+            enemy.layer = 7;
+            enemy.name = "Enemy";
+            enemy.tag = "Enemy";
+            GameManager.Instance.enemy = enemy;
 
             GameManager.Instance.CheckPlayerLinks();
-            UI.Instance.ShowStats(go.GetComponent<Player>(),goE.GetComponent<Player>());
+            UI.Instance.ShowStats(player.GetComponent<Player>(),enemy.GetComponent<Player>());
             
         }
         public void SpawnEnemy()
         {
-            GameObject goE = Instantiate(_enemyPrefab, new Vector3(0, 0, 26), Quaternion.Euler(new Vector3(0, 180, 0)));
-            goE.layer = 7;
-            goE.name = "Enemy";
-            goE.tag = "Enemy";
-            GameManager.Instance.enemy = goE;
+            GameObject enemy = Instantiate(_enemyPrefab, enemySpawnPoint.position, Quaternion.Euler(new Vector3(0, 180, 0)));
+            enemy.layer = 7;
+            enemy.name = "Enemy";
+            enemy.tag = "Enemy";
+            GameManager.Instance.enemy = enemy;
             GameManager.Instance.CheckPlayerLinks();
         }
         public void LevelReset()
