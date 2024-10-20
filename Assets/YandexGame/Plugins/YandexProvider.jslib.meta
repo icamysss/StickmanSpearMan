@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3ed3af298f5e6452387ae92169f94d5b
+guid: 8e24118a2f13f3e40958f8d398d2b692
 PluginImporter:
   externalObjects: {}
   serializedVersion: 2
@@ -30,10 +30,3 @@ PluginImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 235877
-  packageName: PluginYG - Yandex Game integration
-  packageVersion: 1.6.3
-  assetPath: Assets/YandexGame/Plugins/YandexProvider.jslib
-  uploadId: 682427

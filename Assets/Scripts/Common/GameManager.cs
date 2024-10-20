@@ -42,7 +42,7 @@ namespace Duel
         private void Start()
         {
             string lng = YGamesFunc.Instance.Data.Language;
-            Debug.Log(lng);
+            //Debug.Log(lng);
             if (lng != null || lng != "null")
             {
                 if (lng == "ru" || lng == "be" || lng == "uk" || lng == "uz" || lng == "kk")
