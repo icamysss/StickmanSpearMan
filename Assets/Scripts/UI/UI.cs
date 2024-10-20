@@ -31,6 +31,7 @@ namespace Duel
         private void Start()
         {
             inGameUI = _inGameUI.GetComponent<InGameUI>();
+            YandexGame.StickyAdActivity(true);
         }
         public void ClickStart()
         {

@@ -72,7 +72,7 @@ namespace Duel
             Data.Record = _winCount;
             YandexGame.savesData.record = Data.Record;
             YandexGame.SaveProgress();
-            YandexGame.NewLeaderboardScores("bloodDanceLeader", Data.Record);
+            YandexGame.NewLeaderboardScores("Leader", Data.Record);
         }
     }
 }
