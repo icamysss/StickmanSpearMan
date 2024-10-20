@@ -43,10 +43,10 @@ namespace Duel
         }
         private void OnCollisionEnter(Collision collision)
         {
-            //если попал в щит или копьё противника
+            //???? ????? ? ??? ??? ????? ??????????
             if (collision.gameObject.name == "Shield")
             {
-                //Debug.Log("попал в: " + collision.gameObject.name);
+                //Debug.Log("????? ?: " + collision.gameObject.name);
                 DestroySpear(true,0);
                 
                 foreach(ContactPoint hitPoint in collision.contacts)
@@ -55,15 +55,15 @@ namespace Duel
                                                                                  hitPoint.point.y, hitPoint.point.z));
                 }
                 
-                // если попал в персонажа  
+                // ???? ????? ? ?????????  
             } else if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Enemy")
             {
-               // Debug.Log("попал в: " + collision.gameObject.name);
+               // Debug.Log("????? ?: " + collision.gameObject.name);
                 DestroySpear(false, 120);
                 gameObject.transform.SetParent(collision.transform);
                 Hit();
 
-            } //попал в уловитель
+            } //????? ? ?????????
             else if (collision.gameObject.name == "Catcher")
             {
                 DestroySpear(true,0);
@@ -74,8 +74,8 @@ namespace Duel
                 GameObject.Destroy(collision.gameObject);
             }
             else
-            {// попал во что то другое
-                //Debug.Log("попал в: " + collision.gameObject.name);
+            {// ????? ?? ??? ?? ??????
+                //Debug.Log("????? ?: " + collision.gameObject.name);
                 DestroySpear(false, 40);
                 gameObject.transform.SetParent(collision.transform);
                 Hit();
@@ -105,9 +105,9 @@ namespace Duel
             _head.GetComponent<CapsuleCollider>().enabled = false;
             _body.GetComponent<CapsuleCollider>().enabled = false;
         }
-        private void HitCharacter(Vector3 position)
+        public void Destroy()
         {
-           
+            Destroy(gameObject);
         }
     }
 }

@@ -1,5 +1,4 @@
 using Duel;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,8 +9,10 @@ public class InGameUI : MonoBehaviour
 
     [SerializeField] Slider _enemyHealth;
     [SerializeField] Slider _enemyEnergy;
+    public int HPAD = 100;
+    public GameObject button;
 
-    [SerializeField] TextMeshProUGUI victext;
+    [SerializeField] Text victext;
 
     private bool ShowStats = false;
     private Player _player;
@@ -67,6 +68,7 @@ public class InGameUI : MonoBehaviour
         {
             ShowPlayerStats();
             Changelanguage();
+            ShowADHealButtton();
         }
     }
     void Changelanguage()
@@ -75,15 +77,20 @@ public class InGameUI : MonoBehaviour
         Debug.Log(str);
         if (str == "ru" || str == "be" || str == "kk" || str == "uk" || str == "uz")
         {
-            victext.text = "Побед подряд: " + YGamesFunc.Instance._winCount;
+            victext.text = "РџРѕР±РµРґ РїРѕРґСЂСЏРґ: " + YGamesFunc.Instance._winCount;
         }
         else // if (str == "en")
         {
             victext.text = "Victory in a row: " + YGamesFunc.Instance._winCount;
         }
     }
-    void ShowVictories()
+    void  ShowADHealButtton()
     {
-
+        if (_player.Stats.GetHealth() < HPAD && _player.SM.CurrentState != _player.death
+            && _player.Stats.GetHealth() > 0)
+        {
+            button.SetActive(true);
+        }
+        else button.SetActive(false);
     }
 }

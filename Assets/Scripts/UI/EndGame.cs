@@ -1,15 +1,15 @@
-using TMPro;
+using UnityEngine.UI;
 using UnityEngine;
 
 namespace Duel
 {
     public class EndGame : MonoBehaviour
     {
-        [SerializeField] TextMeshProUGUI _header;
-        [SerializeField] TextMeshProUGUI _back;
-        [SerializeField] TextMeshProUGUI _restart;
-        [SerializeField] TextMeshProUGUI _subheader; 
-        [SerializeField] TextMeshProUGUI _recordText;
+        [SerializeField] Text _header;
+        [SerializeField] Text _back;
+        [SerializeField] Text _restart;
+        [SerializeField] Text _subheader; 
+        [SerializeField] Text _recordText;
 
 
         [SerializeField] GameObject returnBtn;
@@ -36,20 +36,20 @@ namespace Duel
             {
                 if (GameManager.Instance.isWin)
                 {
-                    _header.text = "Победа";
+                    _header.text = "РџРѕР±РµРґР°";
                     returnBtn.SetActive(false);
                 }
                 else
                 {
-                    _header.text = "Проиграл";
+                    _header.text = "РРіСЂР° РѕРєРѕРЅС‡РµРЅР°";
                     returnBtn.SetActive(true);
-                    _back.text = "Вернуться";
+                    _back.text = "РџСЂРѕРґРѕР»Р¶РёС‚СЊ";
                 }
                 
                             
-                _restart.text = "Ещё раз";
-                _subheader.text = "побед подряд:";
-                _recordText.text = "рекорд";
+                _restart.text = "Р—Р°РЅРѕРІРѕ";
+                _subheader.text = "РџРѕР±РµРґ РїРѕРґСЂСЏРґ: ";
+                _recordText.text = "Р РµРєРѕСЂРґ: ";
 
             }
             else // if (str == "en")

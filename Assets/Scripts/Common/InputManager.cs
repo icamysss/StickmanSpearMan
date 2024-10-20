@@ -18,13 +18,13 @@ namespace Duel
                 _attack.onClick.Invoke();
             }            
         }
-        void Move()
-        {
-            if (_move.IsInteractable())
-            {
-                _move.onClick.Invoke();
-            }
-        }
+        //void Move()
+        //{
+        //    if (_move.IsInteractable())
+        //    {
+        //        _move.onClick.Invoke();
+        //    }
+        //}
         void Shield()
         {
             if (_shield.IsInteractable())

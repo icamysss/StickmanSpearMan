@@ -330,11 +330,11 @@ MonoBehaviour:
   _audio: {fileID: 30563318}
   _hit: {fileID: 8300000, guid: ba61f1ee69056814cbc7f78464519af2, type: 3}
   player: {fileID: 1482656347}
-  _currentHealth: 300
+  _currentHealth: 500
   _currentEnergy: 100
-  _stepUpEnergy: 3
+  _stepUpEnergy: 5
   _accuracy: 5
-  _strength: 150
+  strengthBase: 69
 --- !u!82 &30563318
 AudioSource:
   m_ObjectHideFlags: 0

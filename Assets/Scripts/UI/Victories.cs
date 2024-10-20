@@ -1,12 +1,12 @@
-using TMPro;
+using UnityEngine.UI;
 using UnityEngine;
 
 namespace Duel
 {
     public class Victories : MonoBehaviour
     {
-        [SerializeField] TextMeshProUGUI _recordVics;
-        [SerializeField] TextMeshProUGUI _currentVics;
+        [SerializeField] Text _recordVics;
+        [SerializeField] Text _currentVics;
 
         void Update()
         {

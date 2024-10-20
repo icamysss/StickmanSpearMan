@@ -11,7 +11,7 @@ namespace Duel
         private int _maxHealth = 300;
         [SerializeField] private int _currentHealth;
 
-        private int _maxEnergy = 120;
+        private int _maxEnergy = 300;
         [SerializeField] private int _currentEnergy;
         [SerializeField] private int _stepUpEnergy = 2;
 
@@ -20,7 +20,8 @@ namespace Duel
         private float _timer = 0;
         int _countBleedTick = 0 ;
 
-        [SerializeField] private float _strength = 200;
+        [SerializeField] private float strengthBase = 74;
+        private float _strength = 0;
 
         public float Strength { get => _strength; set => _strength = value; }
         public bool StopAll { get => stopAll; set => stopAll = value; }
@@ -139,12 +140,15 @@ namespace Duel
 
         private void CalculateStregth()
         {
-            float s = GameManager.Instance.CalculateDistance() * GetConstant();
-            if (s < 20)
+            // 
+            float str = Random.Range(0 , strengthBase / 5);
+            int plusminus = Random.Range(0, 100);
+            if (plusminus > 50)
             {
-                s = 20;
-            }
-            player.Stats.Strength = Random.Range(s - 2, s + 7);
+                player.Stats.Strength = strengthBase + str;
+            }else
+                player.Stats.Strength = strengthBase - str;
+
         }
         private float GetConstant()
         {

@@ -41,10 +41,11 @@ namespace Duel
                 {
                     player.SM.ChangeState(player.attack);
                 }
-                else if (_action == Actions.Move)
-                {
-                    player.SM.ChangeState(player.move);
-                }else if (_action == Actions.Taunt)
+                ////else if (_action == Actions.Move)
+                ////{
+                ////    player.SM.ChangeState(player.move);
+                //}
+            else if (_action == Actions.Taunt)
                 {
                     player.SM.ChangeState(player.taunt);
                 }
@@ -127,7 +128,7 @@ namespace Duel
                         {
                             return Actions.Attack;
                         }
-                        else return Actions.Move;
+                        else return Actions.Attack;
                     }
                 }else { return Actions.Attack; }
             }else
@@ -135,7 +136,7 @@ namespace Duel
                 int k = Random.Range(0, 10);
                 if (k > 7)
                 {
-                    return Actions.Move;
+                    return Actions.Attack;
                 }
                 else
                 {

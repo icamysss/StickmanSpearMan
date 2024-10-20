@@ -1,11 +1,11 @@
-using TMPro;
+using UnityEngine.UI;
 using UnityEngine;
 
 namespace Duel
 {
     public class Language : MonoBehaviour
     {
-        [SerializeField] TextMeshProUGUI buttonText;
+        [SerializeField] Text buttonText;
 
         private void OnEnable()
         {
@@ -18,7 +18,7 @@ namespace Duel
 
         private void Start()
         {
-            if (buttonText == null) Debug.LogError("Отсутсвует ссылка");
+            if (buttonText == null) Debug.LogError("СЃСЃС‹Р»РєР°");
             buttonText.text = GameManager.Instance.Language;
             Changelanguage();
         }

@@ -57,8 +57,8 @@ namespace Duel
             }
             Destroy(GameManager.Instance.player.gameObject);
             Destroy(GameManager.Instance.enemy.gameObject);
-
             UI.Instance._endGame.SetActive(false);
+            UI.Instance._inGameUI.SetActive(true);
             YGamesFunc.Instance._winCount = 0;
             StartGame();
         }
@@ -75,6 +75,7 @@ namespace Duel
                     Destroy(go);
                 }
                 GameManager.Instance.CheckPlayerLinks();
+                UI.Instance._inGameUI.SetActive(true);
                 GameManager.Instance.enemy.GetComponent<Player>().SM.ChangeState(GameManager.Instance.enemy.GetComponent<Player>().idle);
             }
             else LevelReset();
@@ -86,13 +87,9 @@ namespace Duel
             {
                 pl.Stats.Heal(1000);
                 pl.SM.ChangeState(pl.idle);
-                GameObject[] spears = GameObject.FindGameObjectsWithTag("Spear");
-                foreach (GameObject go in spears)
-                {
-                    Destroy(go);
-                }
                 GameManager.Instance.CheckPlayerLinks();
                 GameManager.Instance.player.GetComponent<Player>().SM.ChangeState(GameManager.Instance.player.GetComponent<Player>().idle);
+                UI.Instance._inGameUI.SetActive(true);
             }
             else LevelReset();
         }

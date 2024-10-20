@@ -7101,7 +7101,7 @@ MonoBehaviour:
   _currentEnergy: 100
   _stepUpEnergy: 3
   _accuracy: 15
-  _strength: 150
+  strengthBase: 69
 --- !u!114 &1355093566932386486
 MonoBehaviour:
   m_ObjectHideFlags: 0

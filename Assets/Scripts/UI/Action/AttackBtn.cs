@@ -10,6 +10,7 @@ namespace Duel
 
         [SerializeField] Image _image;
         private Player player;
+
         bool playerGet = false;
 
         private void Start()
@@ -48,21 +49,24 @@ namespace Duel
         }
         private void Update()
         {
-            if (playerGet && player != null)
+            if (player.SM.CurrentState != player.death)
             {
-                if (player.SM.CurrentState == player.idle)
+                if (playerGet && player != null)
                 {
-                    if (player.Stats.GetEnergy() >= 15)
+                    if (player.SM.CurrentState == player.idle)
                     {
-                        Enable();
+                        if (player.Stats.GetEnergy() >= 15)
+                        {
+                            Enable();
+                        }
                     }
+                    else Disable();
                 }
-                else Disable();
-            }
-            if (player.Stats.GetEnergy()< 15)
-            {
-                Disable();
-            }
+                if (player.Stats.GetEnergy() < 15)
+                {
+                    Disable();
+                }
+            }         
         }
     }
 }

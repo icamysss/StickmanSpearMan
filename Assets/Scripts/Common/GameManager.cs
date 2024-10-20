@@ -120,11 +120,7 @@ namespace Duel
             Language = lang;
             onLanguageChanged?.Invoke();
         }
-        public void ShowedReward()
-        {
-            level.ReturnPlayer();
-            UI.Instance._endGame.SetActive(false);
-        }
+
         public void ShowAd()
         {
             YandexGame.FullscreenShow(); 

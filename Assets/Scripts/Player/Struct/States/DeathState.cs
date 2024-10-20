@@ -14,7 +14,18 @@ namespace Duel
             player.ShieldCanOn = false;
             player.characterController.enabled = false;
             EnableRagDoll(true);
+
+
             if (player.spear != null) player.DestroySpear();
+
+            GameObject[] spears = GameObject.FindGameObjectsWithTag("Spear");
+            foreach (GameObject go in spears)
+            {
+                Spear s = go.GetComponent<Spear>();
+                if (s != null) s.Destroy();
+
+            }
+
             player.Stats.StopAll = true;
 
             if (player.gameObject.tag == "Player")

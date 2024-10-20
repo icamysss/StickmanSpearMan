@@ -2,6 +2,7 @@ namespace Duel
 {
     public enum Actions
     {
-        Move, Attack, Taunt
+        //Move,
+        Attack, Taunt
     }
 }
