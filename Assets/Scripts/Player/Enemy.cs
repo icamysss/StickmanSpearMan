@@ -28,7 +28,7 @@ namespace Duel
                     _timer = 0;
                     EnemyLogic();
                 }
-            }           
+            }
         }
 
         private void EnemyLogic()

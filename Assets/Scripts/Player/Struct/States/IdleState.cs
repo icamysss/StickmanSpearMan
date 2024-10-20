@@ -13,6 +13,11 @@ namespace Duel
             player.rig.enabled = false;
             player.animator.SetInteger("Taunt", 0);
             player.animator.SetBool("WinStop", true);
+
+            if (player.gameObject.tag == "Player")
+            {
+                GameManager.Instance.enemy.GetComponent<Enemy>()._enemyEnable = true;
+            }
         }
 
         public override void StateUpdate()

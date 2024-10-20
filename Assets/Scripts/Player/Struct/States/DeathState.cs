@@ -30,14 +30,14 @@ namespace Duel
 
             if (player.gameObject.tag == "Player")
             {
-                //YGamesFunc.Instance.Loose();
+                GameManager.Instance.enemy.GetComponent<Enemy>()._enemyEnable = false;
                 player.Death();
             } else if (player.gameObject.tag == "Enemy")
             {
                 //YGamesFunc.Instance.Win();
                 player.Death();
 
-            }
+            }    
         }
 
         public override void StateUpdate()
