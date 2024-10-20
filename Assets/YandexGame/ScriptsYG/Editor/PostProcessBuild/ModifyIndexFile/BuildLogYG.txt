@@ -1,2 +1,0 @@
-Build path: /Users/icamys/Documents/StickmanSpearMan/build/Stickman
-Build number: 2
