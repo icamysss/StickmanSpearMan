@@ -13,7 +13,7 @@ namespace Duel
         {
             GameManager.Instance.Pause();
             UI.Instance.AClick();
-            GameManager.Instance.ShowAd();
+            //GameManager.Instance.ShowAd();
             AudioManager.Instance.ChangeMute();
         }
         private void Update()

@@ -77,14 +77,23 @@ namespace Duel
         }
         public void ReturnEnemy()
         {
-            Player pl = GameManager.Instance.enemy.GetComponent<Player>();
-            if (pl != null)
+            Player enem = GameManager.Instance.enemy.GetComponent<Player>();
+            if (enem != null)
             {
-                pl.Stats.Heal(1000);
-                pl.SM.ChangeState(pl.idle);
+                enem.Stats.Heal(1000);
+                int plusHP = YGamesFunc.Instance._winCount * 50;
+
+                enem.Stats._currentHealth = enem.Stats._maxHealth;
+
+                enem.SM.ChangeState(enem.idle);
                 GameManager.Instance.CheckPlayerLinks();
                 GameManager.Instance.player.GetComponent<Player>().SM.ChangeState(GameManager.Instance.player.GetComponent<Player>().idle);
                 UI.Instance._inGameUI.SetActive(true);
+
+                enem.Stats._maxHealth = plusHP + enem.Stats.hpBase;
+                enem.Stats._currentHealth = enem.Stats._maxHealth;
+
+                Annoncer.Instance.EnemyReturn();
             }
             else LevelReset();
         }

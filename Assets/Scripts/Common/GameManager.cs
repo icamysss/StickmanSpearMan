@@ -39,7 +39,7 @@ namespace Duel
                 Destroy(gameObject);
             }
             DontDestroyOnLoad(Instance);
-            ShowAd();
+            //ShowAd();
         }
         private void Start()
         {
@@ -104,7 +104,6 @@ namespace Duel
             {
                 enemy.GetComponent<Player>().SM.ChangeState(enemy.GetComponent<Player>().win);
                 isWin = false;
-                ShowAd();
                 UI.Instance.GameOver();
             }
             else if (tag == "Enemy")
@@ -112,7 +111,6 @@ namespace Duel
                 player.GetComponent<Player>().SM.ChangeState(player.GetComponent<Player>().win);
                 
                 isWin = true;
-                ShowAd();
                 level.ReturnEnemy();
                 YGamesFunc.Instance.Win();
             }

@@ -12,10 +12,12 @@ namespace Duel
         private Player player;
         private Player enemy;
         bool playerGet = false;
+        Animation animation;
 
         private void Start()
         {
             GetPlayer();
+                animation = GetComponent<Animation>();
         }
         private void OnEnable()
         {
@@ -55,7 +57,16 @@ namespace Duel
                     Enable();
                 }
                 else Disable();
-            } 
+            }
+
+            if (player.Stats.GetEnergy() < 30)
+            {
+                animation.Play();
+            }
+            else
+            {
+                animation.Stop();
+            }
         }
     }
 }

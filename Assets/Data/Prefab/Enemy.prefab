@@ -7097,8 +7097,9 @@ MonoBehaviour:
   _audio: {fileID: 329297763}
   _hit: {fileID: 8300000, guid: ba61f1ee69056814cbc7f78464519af2, type: 3}
   player: {fileID: 8212268790924005951}
-  _maxHealth: 201
-  _currentHealth: 190
+  _maxHealth: 100
+  _currentHealth: 100
+  hpBase: 100
   _currentEnergy: 100
   _stepUpEnergy: 4
   _accuracy: 15

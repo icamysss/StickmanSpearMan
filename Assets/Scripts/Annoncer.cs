@@ -46,6 +46,28 @@ public class Annoncer : MonoBehaviour
         StartCoroutine(ShowText("Хедшот !!!", "Headshot !!!", Color.red ));
     }
 
+    public void EnemyReturn()
+    {
+        int rnd = Random.Range(0, 4);
+        switch (rnd)
+        {
+            case 0:
+                StartCoroutine(ShowText("Я стал сильнее ", "I'm stronger now", Color.blue, 4f));
+                break;
+            case 1:
+                StartCoroutine(ShowText("Борис бритва вернулся", "I've returned", Color.blue, 4f));
+                break;
+            case 2:
+                StartCoroutine(ShowText("Смотрите кто пришел", "Look at me", Color.blue, 4f));
+                break;
+            default:
+                StartCoroutine(ShowText(YGamesFunc.Instance.Data.PlayerName +
+                    " а я тебя знаю ",
+                    YGamesFunc.Instance.Data.PlayerName + " I know you ", Color.blue, 4f));
+                break;
+        }
+    }
+
     /// <summary>
     ///  слабаааааак
     /// </summary>
@@ -53,22 +75,22 @@ public class Annoncer : MonoBehaviour
     {
         audioSource.PlayOneShot(looseClip);
 
-        int rnd = Random.Range(0, 3);
+        int rnd = Random.Range(0, 4);
         switch (rnd)
         {
             case 0:
-                StartCoroutine(ShowText("Слабак ", "Wuss", Color.white, 4f));
+                StartCoroutine(ShowText("Слабак ", "Wuss", Color.blue, 4f));
                 break;
             case 1:
-                StartCoroutine(ShowText("На рекорд не тянет", "It's not a record", Color.white, 4f));
+                StartCoroutine(ShowText("На рекорд не тянет", "It's not a record", Color.blue, 4f));
                 break;
             case 2:
-                StartCoroutine(ShowText("Этого выносите", "Take it out", Color.white, 4f));
+                StartCoroutine(ShowText("Этого выносите", "Take it out", Color.blue, 4f));
                 break;
             default:
                 StartCoroutine(ShowText(YGamesFunc.Instance.Data.PlayerName +
                     " вставай ",
-                    YGamesFunc.Instance.Data.PlayerName + " wake up ", Color.white, 4f));
+                    YGamesFunc.Instance.Data.PlayerName + " wake up ", Color.blue, 4f));
                 break;
         }
     }
@@ -77,11 +99,11 @@ public class Annoncer : MonoBehaviour
     {
         audioSource.PlayOneShot(winClip);
 
-        int rnd = Random.Range(0, 3);
+        int rnd = Random.Range(0, 4);
         switch (rnd)
         {
             case 0:
-                StartCoroutine(ShowText("Следущий", "The next", Color.red, 4f));
+                StartCoroutine(ShowText("Следующий", "The next", Color.red, 4f));
                 break;
             case 1:
                 StartCoroutine(ShowText("Этот был слабоват", "This one was a little weak", Color.red, 4f));

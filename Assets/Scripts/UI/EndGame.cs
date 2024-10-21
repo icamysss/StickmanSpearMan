@@ -28,6 +28,15 @@ namespace Duel
         {
             Changelanguage();
         }
+        private void Update()
+        {
+            if(YG.YandexGame.isGamePlaying)
+            {
+                YG.YandexGame.GameplayStop();
+            }
+
+        }
+
         private void Changelanguage()
         {
             string str = GameManager.Instance.Language;
