@@ -11,11 +11,14 @@ namespace Duel
 
         [SerializeField] Image _image;
         private Player player;
+        private Player enemy;
         bool playerGet = false;
 
         private void Start()
         {
             GetPlayer();
+            // включаем на старте
+            player.ShieldOnOff();
         }
         private void OnEnable()
         {
@@ -46,6 +49,7 @@ namespace Duel
         {
             player = GameManager.Instance.player.GetComponent<Player>();
             if (player != null) playerGet = true;
+            enemy = GameManager.Instance.enemy.GetComponent<Player>();
         }
         private void Update()
         {
@@ -58,17 +62,24 @@ namespace Duel
                 else if (player._shield.IsShieldActive)
                 {
                     Enable();
-                } 
+                }
                 else Disable();
 
                 if (player._shield.IsShieldActive) animator.enabled = true;
-                else 
+                else
                 {
                     animator.enabled = false;
                     gameObject.transform.localScale = new Vector3(1, 1, 1);
                 }
-               
-            } 
+
+
+
+            }
+
+            if (player.SM.CurrentState == player.death || enemy.Stats.GetHealth() <= 0)
+            {
+                Disable();
+            }          
         }
     }
 }

@@ -10,6 +10,7 @@ namespace Duel
 
         [SerializeField] Image _image;
         private Player player;
+        private Player enemy;
         bool playerGet = false;
 
         private void Start()
@@ -43,17 +44,18 @@ namespace Duel
         {
             player = GameManager.Instance.player.GetComponent<Player>();
             if (player != null) playerGet = true;
+            enemy = GameManager.Instance.enemy.GetComponent<Player>();
         }
         private void Update()
         {
             if (playerGet && player != null)
             {
-                if (player.SM.CurrentState == player.idle)
+                if (player.SM.CurrentState == player.idle && enemy.Stats.GetHealth() > 0)
                 {
                     Enable();
                 }
                 else Disable();
-            }                
+            } 
         }
     }
 }

@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _weapon: {fileID: 4156865354038139456, guid: 01ae8bf467d21b14ab86c70902142a94, type: 3}
   _playerMaterial: {fileID: 2100000, guid: 03573dc113212084c847eb791fff1d69, type: 2}
-  _shieldMaterial: {fileID: 2100000, guid: eeb79980d7d33405aaf3e10c770c18d9, type: 2}
+  _shieldMaterial: {fileID: 2100000, guid: 139f4c1696c68e54390a5ad669273cab, type: 2}
   _particalHit: {fileID: 2485950675384903435, guid: 786e51e44fb60514496516bfa300d110,
     type: 3}
-  _particalHeadshot: {fileID: 2182468979435057199, guid: a3b098aa7d287498ca9d994867262566,
+  _particalHeadshot: {fileID: 3573427701658501122, guid: 74acf59cec4cffa4c839452b635dd6e5,
     type: 3}
-  _particalBleeding: {fileID: 3719289160499509897, guid: d4b9400631cb04076baeec43660fe777,
+  _particalBleeding: {fileID: 6145430467089402420, guid: 8c8dff5037bf06343b4edc8937afd90d,
     type: 3}
-  _particalBloodPool: {fileID: 6490740442949496098, guid: be0052d73767a4714b97e2f7fb7ec707,
+  _particalBloodPool: {fileID: 1111007838023569316, guid: cd403df499aa57446a9fea6bea95ff9f,
     type: 3}

@@ -37,9 +37,8 @@ namespace Duel
                 //YGamesFunc.Instance.Win();
                 player.Death();
                 //выключаем ввод
-                UI.Instance._inGameUI.GetComponent<InGameUI>().btnAction.SetActive(false);
-
-            }    
+            }
+   
         }
 
         public override void StateUpdate()

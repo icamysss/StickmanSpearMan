@@ -8,7 +8,7 @@ namespace Duel
         public AudioSource _audio;
         public AudioClip _hit;
         [SerializeField] Player player;
-        private int _maxHealth = 300;
+        public int _maxHealth = 300;
         [SerializeField] private int _currentHealth;
 
         private int _maxEnergy = 300;

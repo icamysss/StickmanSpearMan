@@ -4,7 +4,7 @@ namespace Duel
 {
     public class Enemy : MonoBehaviour
     {
-        [SerializeField] Player player;
+        [SerializeField] Player _enemy;
         float _distance = 52;
         [SerializeField] float _ActionDelay;
         public bool _enemyEnable = true;    
@@ -29,17 +29,18 @@ namespace Duel
                     EnemyLogic();
                 }
             }
+
         }
 
         private void EnemyLogic()
         {
-            if (player.SM.CurrentState == player.idle)
+            if (_enemy.SM.CurrentState == _enemy.idle)
             {
                Actions _action = SelectAction();
 
                 if (_action == Actions.Attack)
                 {
-                    player.SM.ChangeState(player.attack);
+                    _enemy.SM.ChangeState(_enemy.attack);
                 }
                 ////else if (_action == Actions.Move)
                 ////{
@@ -47,7 +48,7 @@ namespace Duel
                 //}
             else if (_action == Actions.Taunt)
                 {
-                    player.SM.ChangeState(player.taunt);
+                    _enemy.SM.ChangeState(_enemy.taunt);
                 }
             }
         }
@@ -59,16 +60,16 @@ namespace Duel
                 _shieldTimer = 0;
                 if (_shieldOn)
                 {
-                    if (player.Stats.GetEnergy() < 30)
+                    if (_enemy.Stats.GetEnergy() < 30)
                     {
-                        player.ShieldOnOff();
+                        _enemy.ShieldOnOff();
                         _shieldOn = false;
                         return;
                     }
                     int i = Random.Range(0, 10);
                     if (i <= 2)
                     {
-                        player.ShieldOnOff();
+                        _enemy.ShieldOnOff();
                         _shieldOn = false;
                     }
 
@@ -79,11 +80,11 @@ namespace Duel
         {
             if (other.gameObject.tag == "Spear")
             {
-                if (player.Stats.GetEnergy() > 80)
+                if (_enemy.Stats.GetEnergy() > 80)
                 {
                     if (!_shieldOn)
                     {
-                        player.ShieldOnOff();
+                        _enemy.ShieldOnOff();
                         _shieldOn = true;
                     }
                 }
@@ -92,11 +93,11 @@ namespace Duel
                     int i = Random.Range(0, 10);
                     if (i <= 8)
                     {
-                        if (player.Stats.GetEnergy() > 17)
+                        if (_enemy.Stats.GetEnergy() > 17)
                         {
                             if (!_shieldOn)
                             {
-                                player.ShieldOnOff();
+                                _enemy.ShieldOnOff();
                                 _shieldOn = true;
                             }
                         }
@@ -106,10 +107,10 @@ namespace Duel
         }
         private Actions SelectAction()
         {
-            if (player.Stats.GetEnergy() < 15)
+            if (_enemy.Stats.GetEnergy() < 15)
             {
                 return Actions.Taunt;
-            }else if (player.Stats.GetEnergy() > 15 && player.Stats.GetEnergy() < 60)
+            }else if (_enemy.Stats.GetEnergy() > 15 && _enemy.Stats.GetEnergy() < 60)
             {
                 int t = Random.Range(0, 10);
                 if (t < 3)

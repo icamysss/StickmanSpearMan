@@ -311,7 +311,7 @@ MonoBehaviour:
   StartPos: {x: 0, y: 0, z: 0}
   spear: {fileID: 0}
   _stickman: {fileID: 655736693277129911}
-  data: {fileID: 11400000, guid: 199e4760ce0aca04c88644c20e7971ad, type: 2}
+  data: {fileID: 11400000, guid: dbb5d2832e8ee465fa4ee581d78381ed, type: 2}
   _spearSpawn: {fileID: 1784382598}
   _shield: {fileID: 1182072065}
   _stats: {fileID: 8212268789683171096}
@@ -331,9 +331,9 @@ MonoBehaviour:
   _hit: {fileID: 8300000, guid: ba61f1ee69056814cbc7f78464519af2, type: 3}
   player: {fileID: 1482656347}
   _currentHealth: 500
-  _currentEnergy: 100
+  _currentEnergy: 150
   _stepUpEnergy: 5
-  _accuracy: 5
+  _accuracy: 3
   strengthBase: 69
 --- !u!82 &30563318
 AudioSource:

@@ -7,6 +7,10 @@ namespace Duel
     {
         [SerializeField] Text buttonText;
 
+        [SerializeField] string rus;
+        [SerializeField] string eng;
+
+
         private void OnEnable()
         {
             GameManager.onLanguageChanged += Changelanguage;
@@ -22,9 +26,9 @@ namespace Duel
 
             if (str == "ru" || str == "be" || str == "kk" || str == "uk" || str == "uz")
             {
-                buttonText.text = "Нажми что бы начать";
+                buttonText.text = rus;
             }
-            else buttonText.text = "Press to start";
+            else buttonText.text = eng;
 
         }
     }

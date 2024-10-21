@@ -42,7 +42,7 @@ namespace Duel
         private Material PlayerMaterial => data.PlayerMaterial;
         private Material ShieldMaterial => data.ShieldMaterial;
         private GameObject _spear => data.Weapon;
-        public GameObject ParticalHit => data.ParticalHit; // партикл попадания
+        public GameObject ParticalHit => data.ParticalHit; // ??????? ?????????
         public GameObject ParticalHeadshot => data.ParticalHeadshot;
         public GameObject ParticalBleeding => data.ParticalBleeding;
         public GameObject ParticalBloodPool => data.ParticalBloodPool;
@@ -55,7 +55,7 @@ namespace Duel
 
         private void Start()
         {
-            #region Инициализация StateMachine
+            #region ????????????? StateMachine
             SM = new StateMachine();
             idle = new IdleState(this, SM);
             move = new MoveState(this, SM);

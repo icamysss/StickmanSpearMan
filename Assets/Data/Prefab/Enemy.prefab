@@ -7097,9 +7097,10 @@ MonoBehaviour:
   _audio: {fileID: 329297763}
   _hit: {fileID: 8300000, guid: ba61f1ee69056814cbc7f78464519af2, type: 3}
   player: {fileID: 8212268790924005951}
-  _currentHealth: 300
+  _maxHealth: 190
+  _currentHealth: 190
   _currentEnergy: 100
-  _stepUpEnergy: 3
+  _stepUpEnergy: 4
   _accuracy: 15
   strengthBase: 69
 --- !u!114 &1355093566932386486
@@ -7114,7 +7115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0c1cf7a843733c49828e5cb94066f8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 8212268790924005951}
+  _enemy: {fileID: 8212268790924005951}
   _ActionDelay: 3
   _enemyEnable: 1
 --- !u!114 &8212268790924005951
@@ -7150,7 +7151,7 @@ MonoBehaviour:
   StartPos: {x: 0, y: 0, z: 0}
   spear: {fileID: 0}
   _stickman: {fileID: 263257342481824258}
-  data: {fileID: 11400000, guid: dbb5d2832e8ee465fa4ee581d78381ed, type: 2}
+  data: {fileID: 11400000, guid: 199e4760ce0aca04c88644c20e7971ad, type: 2}
   _spearSpawn: {fileID: 774304831434588723}
   _shield: {fileID: 774304831906544564}
   _stats: {fileID: 8883689808103942573}
