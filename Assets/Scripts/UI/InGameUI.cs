@@ -9,6 +9,9 @@ public class InGameUI : MonoBehaviour
 
     [SerializeField] Slider _enemyHealth;
     [SerializeField] Slider _enemyEnergy;
+    [Tooltip("Кнопки действий")]
+    public GameObject btnAction;
+
     public int HPAD = 100;
     public GameObject button;
 
@@ -74,7 +77,6 @@ public class InGameUI : MonoBehaviour
     void Changelanguage()
     {
         string str = GameManager.Instance.Language;
-        Debug.Log(str);
         if (str == "ru" || str == "be" || str == "kk" || str == "uk" || str == "uz")
         {
             victext.text = "Побед подряд: " + YGamesFunc.Instance._winCount;
@@ -92,5 +94,10 @@ public class InGameUI : MonoBehaviour
             button.SetActive(true);
         }
         else button.SetActive(false);
+    }
+
+    public void ShowActionButtons(bool value)
+    {
+        btnAction.SetActive(value);
     }
 }

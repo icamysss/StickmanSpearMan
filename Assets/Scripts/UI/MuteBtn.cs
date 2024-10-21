@@ -15,7 +15,7 @@ namespace Duel
         private void Update()
         {
             if (AudioManager.Instance.Muted) btn.image.color = Color.red;
-            else btn.image.color = Color.green;
+            else btn.image.color = Color.white;
         }
     }
 }

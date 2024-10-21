@@ -69,11 +69,6 @@ namespace Duel
             {
                 pl.Stats.Heal(1000);
                 pl.SM.ChangeState(pl.idle);
-                GameObject[] spears = GameObject.FindGameObjectsWithTag("Spear");
-                foreach (GameObject go in spears)
-                {
-                    Destroy(go);
-                }
                 GameManager.Instance.CheckPlayerLinks();
                 UI.Instance._inGameUI.SetActive(true);
                 GameManager.Instance.enemy.GetComponent<Player>().SM.ChangeState(GameManager.Instance.enemy.GetComponent<Player>().idle);

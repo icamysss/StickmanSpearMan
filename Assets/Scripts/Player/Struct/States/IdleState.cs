@@ -17,6 +17,8 @@ namespace Duel
             if (player.gameObject.tag == "Player")
             {
                 GameManager.Instance.enemy.GetComponent<Enemy>()._enemyEnable = true;
+                // включаем ввод
+                UI.Instance._inGameUI.GetComponent<InGameUI>().btnAction.SetActive(true);
             }
         }
 

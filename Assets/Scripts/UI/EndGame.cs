@@ -31,7 +31,6 @@ namespace Duel
         private void Changelanguage()
         {
             string str = GameManager.Instance.Language;
-            Debug.Log(str);
             if (str == "ru" || str == "be" || str == "kk" || str == "uk" || str == "uz" )
             {
                 if (GameManager.Instance.isWin)
