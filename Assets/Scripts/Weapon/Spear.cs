@@ -35,7 +35,10 @@ namespace Duel
             }
             else
             {
-                if (gameObject.transform.parent != null) gameObject.transform.parent = null;
+                if (gameObject.transform.parent != null)
+                {
+                    gameObject.transform.parent = null;
+                } else { return; }
                 _particalSmoke.SetActive(true);
                 _body.isKinematic = false;
                 _head.isKinematic = false;

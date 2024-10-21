@@ -22,6 +22,8 @@ namespace Duel
         [HideInInspector] public GameObject player;
         [HideInInspector] public GameObject enemy;
 
+        Player _player;
+
 
 
 

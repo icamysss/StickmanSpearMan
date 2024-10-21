@@ -11,8 +11,13 @@ namespace Duel
         public void SpearThrowAnimationEvent()
         {
             _player.rig.enabled = false;
-            _player.spear.SpearFly(_player.Stats.Strength, _player.Stats.Accuracy);
-            _audio.PlayOneShot(_throw);
+            if (_player != null && _player.spear != null)
+            {
+                _player.spear.SpearFly(_player.Stats.Strength, _player.Stats.Accuracy);
+                _audio.PlayOneShot(_throw);
+            }
+           
+          
         }
 
         public void  EndSpearAnimation()

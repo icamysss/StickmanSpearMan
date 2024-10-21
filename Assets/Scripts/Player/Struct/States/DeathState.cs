@@ -31,9 +31,11 @@ namespace Duel
             if (player.gameObject.tag == "Player")
             {
                 GameManager.Instance.enemy.GetComponent<Enemy>()._enemyEnable = false;
+                Annoncer.Instance.PlayerDeath();
                 player.Death();
             } else if (player.gameObject.tag == "Enemy")
             {
+                Annoncer.Instance.EnemyDeath();
                 //YGamesFunc.Instance.Win();
                 player.Death();
                 //выключаем ввод

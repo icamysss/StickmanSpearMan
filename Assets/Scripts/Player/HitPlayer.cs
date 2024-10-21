@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using UnityEngine.UIElements;
 
 namespace Duel
@@ -29,11 +30,13 @@ namespace Duel
             player.Stats.Bleeding();
         }
 
+   
+
         private void OnCollisionEnter(Collision collision)
         {
             if (collision.gameObject.tag == "Spear")
             {
-                if (gameObject.name == "mixamorig:Hips")      // папал в живот
+                if (gameObject.name == "mixamorig:Hips")      // ????? ? ?????
                 {
                     foreach (ContactPoint hitPoint in collision.contacts)
                     {
@@ -42,7 +45,7 @@ namespace Duel
                         return;
                     }
                 }
-                else if (gameObject.name == "mixamorig:Spine1") // папал в грудь
+                else if (gameObject.name == "mixamorig:Spine1") // ????? ? ?????
                 {
                     foreach (ContactPoint hitPoint in collision.contacts)
                     {
@@ -51,7 +54,7 @@ namespace Duel
                         return;
                     }
                 }
-                else if (gameObject.name == "mixamorig:Head") // если попал в голову
+                else if (gameObject.name == "mixamorig:Head") // ???? ????? ? ??????
                 {
                     foreach (ContactPoint hitPoint in collision.contacts)
                     {

@@ -114,6 +114,8 @@ namespace Duel
         public void HeadShot()
         {
             _audio.PlayOneShot(_headShot);
+
+            Annoncer.Instance.HeadSHot();
         }
         
         public void Death()

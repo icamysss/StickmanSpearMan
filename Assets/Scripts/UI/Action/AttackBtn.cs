@@ -48,7 +48,10 @@ namespace Duel
 
         public void ClickBnt()
         {
-            player.SM.ChangeState(player.attack);
+            if ( player.SM.CurrentState != player.attack)
+            {
+                player.SM.ChangeState(player.attack);
+            }
         }
         private void Update()
         {
