@@ -234,7 +234,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 318683535}
   m_LocalRotation: {x: 0, y: 0, z: 0.17364816, w: 0.9848078}
-  m_LocalPosition: {x: 0, y: 0, z: -555}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1066,7 +1066,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 72}
-  m_SizeDelta: {x: 900, y: 400}
+  m_SizeDelta: {x: 1200, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1216292254
 MonoBehaviour:
@@ -2356,6 +2356,26 @@ PrefabInstance:
       propertyPath: level
       value: 
       objectReference: {fileID: 714941813}
+    - target: {fileID: 5811268024227611288, guid: aae42e5e0c5bc5f4c93d4c60dccfdabf,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 5811268024227611288, guid: aae42e5e0c5bc5f4c93d4c60dccfdabf,
+        type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 23ea3e6d3cc01884aa2fe7188b8d1322, type: 3}
+    - target: {fileID: 5811268024227611288, guid: aae42e5e0c5bc5f4c93d4c60dccfdabf,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 23ea3e6d3cc01884aa2fe7188b8d1322, type: 3}
+    - target: {fileID: 5811268024227611288, guid: aae42e5e0c5bc5f4c93d4c60dccfdabf,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5859425596743273337, guid: aae42e5e0c5bc5f4c93d4c60dccfdabf,
         type: 3}
       propertyPath: winClip

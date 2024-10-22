@@ -10,9 +10,9 @@ namespace Duel
 
         public override void Enter()
         {
-            if (!GameManager.Instance._audioTaunt.isPlaying)
+            if (GameManager.Instance._audioTaunt.isPlaying)
             {
-                GameManager.Instance.TauntMusic();
+                GameManager.Instance._audioTaunt.volume = 0.1f;
             }
 
             player.ShieldCanOn = false;
@@ -39,7 +39,7 @@ namespace Duel
                if (!(GameManager.Instance.enemy.GetComponent<Player>().SM.CurrentState ==
                     GameManager.Instance.enemy.GetComponent<Player>().taunt))
                 {
-                    GameManager.Instance._audioTaunt.Stop();
+                    GameManager.Instance._audioTaunt.volume = 0.01f;
                 }
             }
             else if (player.gameObject.tag == "Enemy")
@@ -47,7 +47,7 @@ namespace Duel
                 if (!(GameManager.Instance.player.GetComponent<Player>().SM.CurrentState ==
                      GameManager.Instance.player.GetComponent<Player>().taunt))
                 {
-                    GameManager.Instance._audioTaunt.Stop();
+                    GameManager.Instance._audioTaunt.volume = 0.01f;
                 }
             }
         }

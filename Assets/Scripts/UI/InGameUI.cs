@@ -43,9 +43,9 @@ public class InGameUI : MonoBehaviour
         _playerEnergy.minValue = 0;
         _playerEnergy.value = _player.Stats.GetEnergy();
 
-        _enemyHealth.maxValue = _player.Stats.GetMaxHealth();
+        _enemyHealth.maxValue = _enemy.Stats.GetMaxHealth();
         _enemyHealth.minValue = 0;
-        _enemyHealth.value = _player.Stats.GetHealth();
+        _enemyHealth.value = _enemy.Stats.GetHealth();
 
         _enemyEnergy.maxValue = _enemy.Stats.GetMaxEnergy();
         _enemyEnergy.minValue = 0;

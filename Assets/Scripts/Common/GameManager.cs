@@ -71,7 +71,8 @@ namespace Duel
         }
         public void TauntMusic()
         {
-                _audioTaunt.PlayOneShot(_music);
+                _audioTaunt.Play();
+            _audioTaunt.volume = 0.05f;
         }
         public void CheckPlayerLinks()
         {

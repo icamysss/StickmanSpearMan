@@ -52,7 +52,7 @@ namespace Duel
         {
             if (playerGet && player != null)
             {
-                if (player.SM.CurrentState == player.idle && enemy.Stats.GetHealth() > 0)
+                if (player.SM.CurrentState == player.idle && enemy.Stats.GetHealth() > 0 && !GameManager.Instance.isPause)
                 {
                     Enable();
                 }

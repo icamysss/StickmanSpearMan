@@ -76,7 +76,7 @@ namespace Duel
 
             }
 
-            if (player.SM.CurrentState == player.death || enemy.Stats.GetHealth() <= 0)
+            if (player.SM.CurrentState == player.death || enemy.Stats.GetHealth() <= 0 || GameManager.Instance.isPause)
             {
                 Disable();
             }          

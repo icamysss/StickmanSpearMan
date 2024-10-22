@@ -10,6 +10,7 @@ public class recordShow : MonoBehaviour
     [SerializeField] string eng;
 
 
+
     public YGamesFunc yaf;
 
     private void OnEnable()
@@ -35,5 +36,10 @@ public class recordShow : MonoBehaviour
         }
         else buttonText.text = eng + ": " + yaf.Data.Record.ToString();
 
+    }
+
+    private void Update()
+    {
+        Changelanguage();
     }
 }

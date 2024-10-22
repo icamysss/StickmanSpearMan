@@ -55,7 +55,7 @@ namespace Duel
         }
         private void Update()
         {
-            if (player.SM.CurrentState != player.death && enemy.Stats.GetHealth() > 0)
+            if (player.SM.CurrentState != player.death && enemy.Stats.GetHealth() > 0 && !GameManager.Instance.isPause)
             {
                 if (playerGet && player != null)
                 {
