@@ -61,9 +61,18 @@ public class Annoncer : MonoBehaviour
                 StartCoroutine(ShowText("Смотрите кто пришел", "Look at me", Color.blue, 4f));
                 break;
             default:
-                StartCoroutine(ShowText(YGamesFunc.Instance.Data.PlayerName +
-                    " а я тебя знаю ",
-                    YGamesFunc.Instance.Data.PlayerName + " I know you ", Color.blue, 4f));
+                if (YG.YandexGame.auth)
+                {
+                    StartCoroutine(ShowText(YGamesFunc.Instance.Data.PlayerName +
+                   " мы видились? ",
+                   YGamesFunc.Instance.Data.PlayerName + " I know you ", Color.blue, 4f));
+                }
+                else
+                {
+                    StartCoroutine(ShowText("Мы видились?",
+                  " I see you ", Color.blue, 4f));
+                }
+               
                 break;
         }
     }
@@ -79,18 +88,28 @@ public class Annoncer : MonoBehaviour
         switch (rnd)
         {
             case 0:
-                StartCoroutine(ShowText("Слабак ", "Wuss", Color.blue, 4f));
+                StartCoroutine(ShowText("Слабак !", "Wuss", Color.blue, 4f));
                 break;
             case 1:
-                StartCoroutine(ShowText("На рекорд не тянет", "It's not a record", Color.blue, 4f));
+                StartCoroutine(ShowText("На рекорд не тянет ...", "It's not a record", Color.blue, 4f));
                 break;
             case 2:
-                StartCoroutine(ShowText("Этого выносите", "Take it out", Color.blue, 4f));
+                StartCoroutine(ShowText("Этого выносите !", "Take it out", Color.blue, 4f));
                 break;
             default:
-                StartCoroutine(ShowText(YGamesFunc.Instance.Data.PlayerName +
+                // если авторизован
+                if (YG.YandexGame.auth)
+                {
+                    StartCoroutine(ShowText(YGamesFunc.Instance.Data.PlayerName +
                     " вставай ",
                     YGamesFunc.Instance.Data.PlayerName + " wake up ", Color.blue, 4f));
+                }
+                else
+                {
+                    StartCoroutine(ShowText(
+                                     "что лежишь ? вставай !",
+                             " wake up neo ", Color.blue, 4f));
+                }
                 break;
         }
     }
