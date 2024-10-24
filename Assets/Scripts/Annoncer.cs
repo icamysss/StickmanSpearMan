@@ -15,7 +15,7 @@ public class Annoncer : MonoBehaviour
     public AudioClip looseClip;
     public AudioClip winClip;
 
-    private AudioSource audioSource;
+    public AudioSource audioSource;
 
 
 
@@ -33,15 +33,14 @@ public class Annoncer : MonoBehaviour
 
 
         textinUI.enabled = false;
-        audioSource = GetComponent<AudioSource>();
+       
     }
 
 
 
     public void HeadSHot()
     {
-       
-
+        
         audioSource.PlayOneShot(headShotClip);
         StartCoroutine(ShowText("Хедшот !!!", "Headshot !!!", Color.red ));
     }

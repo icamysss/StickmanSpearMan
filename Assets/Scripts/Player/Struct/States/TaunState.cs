@@ -12,7 +12,7 @@ namespace Duel
         {
             if (GameManager.Instance._audioTaunt.isPlaying)
             {
-                GameManager.Instance._audioTaunt.volume = 0.1f;
+                GameManager.Instance._audioTaunt.volume = 0.3f;
             }
 
             player.ShieldCanOn = false;

@@ -24,12 +24,12 @@ namespace Duel
         
         public void ChangeMute()
         {
-            if (!Muted)
+            if (!Muted )
             {
                 Muted = true;
                 AudioListener.volume = 0;
             }
-            else if (Muted)
+            else if (Muted  )
             {
                 Muted = false;
                 AudioListener.volume = 1;
@@ -42,11 +42,17 @@ namespace Duel
                 AudioListener.volume = 0;
 
             }
-            else
+            else if (GameManager.Instance.isPause)
             {
-                AudioListener.volume = 1;
-                Muted = false;
+                AudioListener.volume = 0;
 
+            }
+            else if (focus)
+            {
+                if (!GameManager.Instance.isPause && !Muted)
+                {
+                    AudioListener.volume = 1;
+                }           
             }
 
             
