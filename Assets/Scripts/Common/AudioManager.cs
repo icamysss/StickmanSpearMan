@@ -40,7 +40,6 @@ namespace Duel
             if (!focus)
             {
                 AudioListener.volume = 0;
-
             }
             else if (GameManager.Instance.isPause)
             {

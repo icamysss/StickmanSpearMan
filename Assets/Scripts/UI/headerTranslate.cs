@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,6 +12,11 @@ namespace Duel
         [SerializeField] string eng;
 
 
+        private void Start()
+        {
+            Changelanguage();
+        }
+
         private void OnEnable()
         {
             GameManager.onLanguageChanged += Changelanguage;
@@ -20,7 +26,7 @@ namespace Duel
             GameManager.onLanguageChanged -= Changelanguage;
         }
 
-        void Changelanguage()
+        public void Changelanguage()
         {
             string str = GameManager.Instance.Language;
 

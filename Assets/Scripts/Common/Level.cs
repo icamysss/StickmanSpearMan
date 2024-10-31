@@ -18,7 +18,8 @@ namespace Duel
         {
             road.SetActive(true);
             SpawnPlayers();
-           // SpawnEnemy();         
+           // SpawnEnemy();   
+           YG.YandexGame.GameplayStart();
         }
 
         public void SpawnPlayers()
@@ -66,7 +67,7 @@ namespace Duel
         {
             Player pl = GameManager.Instance.player.GetComponent<Player>();
             if (pl != null)
-            {
+            { YG.YandexGame.GameplayStart();
                 pl.Stats.Heal(1000);
                 pl.SM.ChangeState(pl.idle);
                 GameManager.Instance.CheckPlayerLinks();
@@ -77,9 +78,11 @@ namespace Duel
         }
         public void ReturnEnemy()
         {
+            
             Player enem = GameManager.Instance.enemy.GetComponent<Player>();
             if (enem != null)
             {
+                YG.YandexGame.GameplayStart();
                 enem.Stats.Heal(1000);
                 int plusHP = YGamesFunc.Instance._winCount * 50;
 

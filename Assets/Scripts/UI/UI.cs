@@ -38,7 +38,6 @@ namespace Duel
             GameManager.Instance.GameStart();
             _startUI.SetActive(false);
             _inGameUI.SetActive(true);
-            YG.YandexGame.GameplayStart();
             AClick();
         }
         
@@ -52,7 +51,7 @@ namespace Duel
         }
         public void GameOver()
         {
-            YG.YandexGame.GameplayStop();
+            YandexGame.GameplayStop();
             _endGame.SetActive(true);
             _inGameUI.SetActive(false);
         }

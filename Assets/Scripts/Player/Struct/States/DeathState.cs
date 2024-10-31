@@ -40,7 +40,6 @@ namespace Duel
                 player.Death();
                 //выключаем ввод
             }
-   
         }
 
         public override void StateUpdate()

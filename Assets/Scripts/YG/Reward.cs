@@ -42,6 +42,5 @@ public void ExampleOpenRewardAd(int id)
 {
 	// Вызываем метод открытия видео рекламы
 	YandexGame.RewVideoShow(id);
-		YG.YandexGame.GameplayStop();
 	}
 }

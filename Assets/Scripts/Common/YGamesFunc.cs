@@ -65,6 +65,7 @@ namespace Duel
             Data.Record = YandexGame.savesData.record;
 
             GameManager.Instance.ChangeLanguage(Data.Language);
+            YandexGame.GameplayStop();
         }
 
         private void SaveRecord()

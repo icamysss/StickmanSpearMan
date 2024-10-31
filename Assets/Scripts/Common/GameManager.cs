@@ -82,7 +82,6 @@ namespace Duel
         public void GameStart()
         {
             level.StartGame();
-
         }
 
         public float CalculateDistance()
@@ -132,11 +131,15 @@ namespace Duel
             {
                 Time.timeScale = 1;
                 isPause = false;
+                _audioTaunt.Play();
+                YandexGame.GameplayStart();
             }
             else 
             {
+                YandexGame.GameplayStop();
                 Time.timeScale = 0;
                 isPause = true;
+                _audioTaunt.Stop();
             } 
         }
     }
