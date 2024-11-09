@@ -25,15 +25,15 @@ namespace Duel
         public void OnClickButtonLanguage()
         {
             UI.Instance.AClick();
-            if (buttonText.text == "ru")
+            if (buttonText.text == "Русский")
             {
                 GameManager.Instance.ChangeLanguage("en");
-                buttonText.text = "en";
+                buttonText.text = "English";
             }
-            else if (buttonText.text == "en")
+            else if (buttonText.text == "English")
             {
                 GameManager.Instance.ChangeLanguage("ru");
-                buttonText.text = "ru";
+                buttonText.text = "Русский";
             }
             else
             {
@@ -47,8 +47,8 @@ namespace Duel
 
             if (str == "ru" || str == "be" || str == "kk" || str == "uk" || str == "uz")
             {
-                buttonText.text = "ru";
-            }else buttonText.text = "en";
+                buttonText.text = "Русский";
+            }else buttonText.text = "English";
 
         }
     }

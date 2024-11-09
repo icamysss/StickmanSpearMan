@@ -355,7 +355,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4f0d78f96c1115643a4a069981d6ca1e, type: 2}
+  - {fileID: 2100000, guid: 5d0643ddd33114003b0994ba0787368e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -589,7 +589,7 @@ PrefabInstance:
         type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 92d25ae36e7cf46aeb32301a4e04a957, type: 2}
+      objectReference: {fileID: 2100000, guid: 3bdfc954a51024d0cb0fb798d4da88cc, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -1102,6 +1102,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 466557582}
+    - target: {fileID: 1517342044, guid: 2f93e2f397dfd1f4a9fb9536db3a45b2, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1517342044, guid: 2f93e2f397dfd1f4a9fb9536db3a45b2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 171.1
+      objectReference: {fileID: 0}
     - target: {fileID: 1712814890, guid: 2f93e2f397dfd1f4a9fb9536db3a45b2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1120,6 +1128,42 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1854157782}
+    - target: {fileID: 1465117652509665015, guid: 2f93e2f397dfd1f4a9fb9536db3a45b2,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 21eaa595dc8ba4082b6b8e6b93777e89,
+        type: 3}
+    - target: {fileID: 1465117653090942444, guid: 2f93e2f397dfd1f4a9fb9536db3a45b2,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465117653090942444, guid: 2f93e2f397dfd1f4a9fb9536db3a45b2,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465117653090942444, guid: 2f93e2f397dfd1f4a9fb9536db3a45b2,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465117653090942444, guid: 2f93e2f397dfd1f4a9fb9536db3a45b2,
+        type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465117653090942444, guid: 2f93e2f397dfd1f4a9fb9536db3a45b2,
+        type: 3}
+      propertyPath: m_FontData.m_AlignByGeometry
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465117653090942444, guid: 2f93e2f397dfd1f4a9fb9536db3a45b2,
+        type: 3}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1465117653512705282, guid: 2f93e2f397dfd1f4a9fb9536db3a45b2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1175,6 +1219,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 1465117653879341900, guid: 2f93e2f397dfd1f4a9fb9536db3a45b2,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5550374740988979091, guid: 2f93e2f397dfd1f4a9fb9536db3a45b2,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1185,6 +1234,16 @@ PrefabInstance:
       propertyPath: yaf
       value: 
       objectReference: {fileID: 949261609}
+    - target: {fileID: 8616974474890427969, guid: 2f93e2f397dfd1f4a9fb9536db3a45b2,
+        type: 3}
+      propertyPath: m_Text
+      value: "\u0420\u0443\u0441\u0441\u043A\u0438\u0439"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8616974474890427969, guid: 2f93e2f397dfd1f4a9fb9536db3a45b2,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 300
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3931339229065566904, guid: 2f93e2f397dfd1f4a9fb9536db3a45b2, type: 3}
     - {fileID: 4648187837116559381, guid: 2f93e2f397dfd1f4a9fb9536db3a45b2, type: 3}
